@@ -1,0 +1,17 @@
+server:
+  port: 8999
+
+spring:
+  #mongodb
+  data:
+    mongodb:
+      uri: mongodb://admin:admin@grocery-shard-00-00.ordlv.mongodb.net:27017,grocery-shard-00-01.ordlv.mongodb.net:27017,grocery-shard-00-02.ordlv.mongodb.net:27017/grocery?ssl=true&replicaSet=atlas-wyam42-shard-0&authSource=admin&retryWrites=true&w=majority
+security:
+  oauth2:
+    client:
+      client-id: dfbf5048085609154185
+      client-secret: aeef956b31a6e667f4d2c3366db089b51a439c89
+      user-authorization-uri: https://github.com/login/oauth/authorize
+      access-token-uri: https://github.com/login/oauth/access_token
+    resource:
+      userInfoUri: https://api.github.com/user
